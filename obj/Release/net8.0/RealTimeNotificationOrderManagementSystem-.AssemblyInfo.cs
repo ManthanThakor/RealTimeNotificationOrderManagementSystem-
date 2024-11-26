@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RealTimeNotificationOrderManagementSystem-")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c010ede7fb63f7162ee3b48ecc69e5e604cc0db2")]
 [assembly: System.Reflection.AssemblyProductAttribute("RealTimeNotificationOrderManagementSystem-")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RealTimeNotificationOrderManagementSystem-")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
