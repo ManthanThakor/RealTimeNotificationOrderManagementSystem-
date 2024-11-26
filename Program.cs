@@ -2,72 +2,69 @@
 
 namespace RealTimeNotificationSystem
 {
-    public delegate void OrderNotifi(string message);
-
-
     public class Order
     {
-        public event OrderNotifi OrderPlaced;
-        public event OrderNotifi OrderShipped;
-        public event OrderNotifi OrderDelivered;
+        public event EventHandler OrderPlaced;
+        public event EventHandler OrderShipped;
+        public event EventHandler OrderDelivered;
 
         public void PlaceOrder()
         {
-           Console.WriteLine("Order has been placed.");
-            RaiseOrderPlaced("Your order has been successfully placed.");
+            Console.WriteLine("Order has been placed.");
+            RaiseOrderPlaced();
         }
 
         public void ShipOrder()
         {
             Console.WriteLine("Order has been shipped.");
-            RaiseOrderShipped("Your order is on its way!");
-
+            RaiseOrderShipped();
         }
 
         public void DeliverOrder()
         {
             Console.WriteLine("Order has been delivered.");
-            RaiseOrderDelivered("Your order has been delivered.");
+            RaiseOrderDelivered();
         }
 
-        protected virtual void RaiseOrderPlaced(string message)
+        protected virtual void RaiseOrderPlaced()
         {
-            OrderPlaced?.Invoke(message);
+            OrderPlaced?.Invoke(this, EventArgs.Empty);
         }
-        protected virtual void RaiseOrderShipped(string message)
+
+        protected virtual void RaiseOrderShipped()
         {
-            OrderShipped?.Invoke(message);
+            OrderShipped?.Invoke(this, EventArgs.Empty);
         }
-        protected virtual void RaiseOrderDelivered(string message)
+
+        protected virtual void RaiseOrderDelivered()
         {
-            OrderDelivered?.Invoke(message);
+            OrderDelivered?.Invoke(this, EventArgs.Empty);
         }
-            
     }
 
     public interface INotification
     {
-        void OnOrderNotification(string message);
+        void OnOrderNotification(object sender, EventArgs e);
     }
 
     public class EmailService : INotification
     {
-        public void OnOrderNotification(string message)
+        public void OnOrderNotification(object sender, EventArgs e)
         {
-            Console.WriteLine($"[*Email Notification*]: {message}");
+            Console.WriteLine("[*Email Notification*]: Your order status has changed.");
         }
     }
 
     public class SMSService : INotification
-    { 
-        public void OnOrderNotification(string messge)
+    {
+        public void OnOrderNotification(object sender, EventArgs e)
         {
-            Console.WriteLine($"[*SMS Notification*]: {messge}");
+            Console.WriteLine("[*SMS Notification*]: Your order status has changed.");
         }
     }
 
     class Program
-    { 
+    {
         static void Main(string[] args)
         {
             Console.WriteLine("\n Real-Time Notification System for Order Management Using Events and Delegates in C# \n");
