@@ -12,3 +12,4 @@ E:\manthan\RealTimeNotificationOrderManagementSystem-\obj\Debug\net8.0\refint\Re
 E:\manthan\RealTimeNotificationOrderManagementSystem-\obj\Debug\net8.0\RealTimeNotificationOrderManagementSystem-.pdb
 E:\manthan\RealTimeNotificationOrderManagementSystem-\obj\Debug\net8.0\RealTimeNotificationOrderManagementSystem-.genruntimeconfig.cache
 E:\manthan\RealTimeNotificationOrderManagementSystem-\obj\Debug\net8.0\ref\RealTimeNotificationOrderManagementSystem-.dll
+E:\manthan\RealTimeNotificationOrderManagementSystem-\obj\Debug\net8.0\RealTimeNotificationOrderManagementSystem-.sourcelink.json
