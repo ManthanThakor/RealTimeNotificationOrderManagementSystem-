@@ -24,7 +24,7 @@ To run the Real-Time Notification System locally:
 
 2. Navigate to the project folder:
 
-	cd RealTimeNotificationSystem
+		cd RealTimeNotificationSystem
 
 3. Open the project in your preferred C# IDE (e.g., Visual Studio or Visual Studio Code).
 
