@@ -2,6 +2,19 @@
 
 This is a simple implementation of a Real-Time Notification System in C# for order management. The system uses C# events and delegates to notify different services (Email, SMS) when an order is placed, shipped, or delivered.
 
+## Problem Statement
+
+Real-Time Notification System Using Events and Delegates in C#
+
+Scenario:
+An online shopping application needs a notification system to inform users about the progress of their orders. Notifications should be sent via email and SMS when the following events occur:
+
+1. Order Placed: Notify when the order is successfully placed.
+2. Order Shipped: Notify when the order is shipped.
+3. Order Delivered: Notify when the order is delivered.
+
+The application should use delegates and events to handle the notifications efficiently. Multiple subscribers (like email and SMS services) should receive updates whenever an event occurs.
+
 ## Features
 
 - **Real-time notifications**: The system notifies via Email and SMS using events when certain actions (Order Placed, Order Shipped, Order Delivered) occur.
